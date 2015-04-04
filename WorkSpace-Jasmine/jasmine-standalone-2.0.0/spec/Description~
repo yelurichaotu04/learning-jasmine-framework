@@ -1,0 +1,25 @@
+EXAMPLE 1:-
+var calc = new Calculator;
+expect(calc.add(2, 3)).toEqual(5);
+expect(calc.sub(8, 5)).toEqual(3);
+expect(calc.mult(4, 3)).toEqual(12);
+expect(calc.div(12, 4)).toEqual(3);
+
+EXAMPLE 2:-
+it("can add positive integers", function() {
+expect(calc.add(2, 3)).toEqual(5);
+});
+it("can subtract positive integers", function() {
+expect(calc.sub(8, 5)).toEqual(3);
+});
+it("can multiply positive integers", function() {
+expect(calc.mult(4, 3)).toEqual(12);
+});
+it("can divide positive integers", function() {
+expect(calc.div(12, 4)).toEqual(3);
+});
+
+Each spec should test only one case or scenario at a time. In the first example, if
+you had an error in your mult function, the spec would fail even if the other components
+worked perfectly. In Second example, only one test will fail, and you’ll be able to more
+quickly pinpoint that your multiplication is broken.
